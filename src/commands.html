@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/commands.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link rel="icon" type="image/x-icon" href="images/LUKA.png">
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <title>Luka Commands</title>
+  <link rel="icon" type="image/x-icon" href="images/LUKA.png">
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <style>
+    .category {
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    
+    .description {
+      display: none;
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+    
+    .description ul {
+      list-style-type: disc;
+    }
+  </style>
+  <script>
+    function toggleDescription(id) {
+      var desc = document.getElementById(id);
+      if (desc.style.display === "none") {
+        desc.style.display = "block";
+      } else {
+        desc.style.display = "none";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <center>
+    <hr size="5" noshade color="#ffffff">
+  </center>
+  <div class="topnav">
+    <div class="logo">
+      <a href="home.html"><img src="images/LUKA.png" alt="Logo" height="40"></a>
+    </div>
+    <div class="menu">
+      <a href="home.html">Home</a>
+      <a href="updates.html">Updates</a>
+      <a class="active" href="commands.html">Commands</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <center>
+    <hr size="5" noshade color="#ffffff">
+  </center>
+  <div class='headertext'>
+    <center>
+      <p>Commands</p>
+      <hr size="5" noshade color="#ffffff">
+    </center>
+  </div>
+
+
+  <div class="mt-4"></div>
+  <div class="row">
+      <div class="col-md-4 my-2">
+          <div class="card p-3">
+              <h5>Select Commands Category</h5>
+              <hr />
+              <button onclick="active(this)" id="CategoryBtnAll" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class="fad fa-icons ttt"></i>&nbsp; All Commands</button>
+              
+              <button onclick="active(this)" id="CategoryBtn0" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-gift ttt'></i>&nbsp; General Commands</button>
+              
+              <button onclick="active(this)" id="CategoryBtn1" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-globe-europe ttt'></i>&nbsp; Media Commands</button>
+              
+              <button onclick="active(this)" id="CategoryBtn2" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-hammer-war ttt'></i>&nbsp;&nbsp; Moderation Commands</button>
+              
+              <button onclick="active(this)" id="CategoryBtn3" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-crown ttt'></i>&nbsp;&nbsp; Starboard Commands</button>
+              
+              <button onclick="active(this)" id="CategoryBtn4" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-star ttt'></i>&nbsp; Vanity Commands</button>
+              
+              <button onclick="active(this)" id="CategoryBtn5" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-lock ttt'></i>&nbsp; Security Commands</button>
+              
+              <button onclick="active(this)" id="CategoryBtn6" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-vcard ttt'></i>&nbsp; VCRoles Commands</button>
+              
+              <button onclick="active(this)" id="CategoryBtn7" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-shield-alt ttt'></i>&nbsp; Raidmode Commands</button>
+              
+              <button onclick="active(this)" id="CategoryBtn8" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-text-height ttt'></i>&nbsp; TextToEmoji Commands</button>
+              
+              <button onclick="active(this)" id="CategoryBtn9" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-clipboard-list ttt'></i>&nbsp; Logging Commands</button>
+              
+              <button onclick="active(this)" id="CategoryBtn10" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-ticket-alt ttt'></i>&nbsp; Ticket Commands</button>
+              
+              <button onclick="active(this)" id="CategoryBtn11" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-handshake ttt'></i>&nbsp; Welcome Commands</button>
+              
+              <button onclick="active(this)" id="CategoryBtn12" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-gift ttt'></i>&nbsp; Giveaway Commands</button>
+              
+              <button onclick="active(this)" id="CategoryBtn13" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-smile ttt'></i>&nbsp; Fun Commands</button>
+              
+              <button onclick="active(this)" id="CategoryBtn14" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-cogs ttt'></i>&nbsp; CustomRole Commands</button>
+              
+              <button onclick="active(this)" id="CategoryBtn15" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-gamepad ttt'></i>&nbsp; Games Commands</button>
+              
+              <button onclick="active(this)" id="CategoryBtn16" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-volume-up ttt'></i>&nbsp; Soundboard Commands</button>
+              
+              <button onclick="active(this)" id="CategoryBtn17" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-plus ttt'></i>&nbsp; Extra Commands</button>
+              
+              <button onclick="active(this)" id="CategoryBtn18" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-robot ttt'></i>&nbsp; Autoresponse Commands</button>
+          </div>
+      </div>
+    <div class="col-md-8 my-2">
+      <input type="text" class="w-100 search-box" oninput="search(this.value)" placeholder="Search for commands" />
+      
+          
+              <div class="mt-4"></div>
+          
+
+              <div class="commands-section" id="Category0"></div>
+
+              <script>
+                  const general = [
+                      { id: 'afk', command: '$afk', description: '- Set your status as AFK', example: '$afk [reason]' },
+                      { id: 'avatar', command: '$avatar', description: '- Get a user\'s avatar', example: '$avatar @user' },
+                      { id: 'banner', command: '$banner', description: '- Get a user\'s banner', example: '$banner @user' },
+                      { id: 'servericon', command: '$servericon', description: '- Get the server\'s icon', example: '$servericon' },
+                      { id: 'membercount', command: '$membercount', description: '- Get the number of members in the server', example: '$membercount' },
+                      { id: 'poll', command: '$poll', description: '- Create a poll', example: '$poll [question] [option1] [option2]' },
+                      { id: 'hack', command: '$hack', description: '- Get hacking information (note: for entertainment purposes)', example: '$hack [target]' },
+                      { id: 'token', command: '$token', description: '- Display token (note: not real token)', example: '$token [user]' },
+                      { id: 'users', command: '$users', description: '- List all users', example: '$users' },
+                      { id: 'italicize', command: '$italicize', description: '- Italicize text', example: '$italicize [text]' },
+                      { id: 'strike', command: '$strike', description: '- Strike through text', example: '$strike [text]' },
+                      { id: 'quote', command: '$quote', description: '- Quote text', example: '$quote [text]' },
+                      { id: 'code', command: '$code', description: '- Format text as code', example: '$code [text]' },
+                      { id: 'bold', command: '$bold', description: '- Bold text', example: '$bold [text]' },
+                      { id: 'censor', command: '$censor', description: '- Censor text', example: '$censor [text]' },
+                      { id: 'underline', command: '$underline', description: '- Underline text', example: '$underline [text]' },
+                      { id: 'gender', command: '$gender', description: '- Set your gender', example: '$gender [male/female/other]' },
+                      { id: 'wizz', command: '$wizz', description: '- Wizz server (note: not real)', example: '$wizz' },
+                      { id: 'pikachu', command: '$pikachu', description: '- Pikachu command', example: '$pikachu' },
+                      { id: 'shorten', command: '$shorten', description: '- Shorten a URL', example: '$shorten [URL]' },
+                      { id: 'urban', command: '$urban', description: '- Get a definition from Urban Dictionary', example: '$urban [term]' },
+                      { id: 'rickroll', command: '$rickroll', description: '- Rickroll a user', example: '$rickroll @user' },
+                      { id: 'hash', command: '$hash', description: '- Generate a hash', example: '$hash [text]' },
+                      { id: 'snipe', command: '$snipe', description: '- Snipe the last deleted message', example: '$snipe' },
+                      { id: 'roleall', command: '$roleall', description: '- Assign role to all members', example: '$roleall [role]' }
+                  ];
+          
+                  const generalcommandsSection = document.getElementById('Category0');
+          
+                  general.forEach(command => {
+                      const accordion = `
+                          <div class="accordion accordion-flush mt-2" id="${command.id}">
+                              <div class="accordion-item">
+                                  <h2 class="accordion-header" id="flush-heading${command.id.charAt(0).toUpperCase() + command.id.slice(1)}">
+                                      <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f${command.id}">
+                                          ${command.command}&nbsp; <span class="command-descreption">${command.description}</span>
+                                      </button>
+                                  </h2>
+                                  <div id="f${command.id}" class="accordion-collapse collapse" data-bs-parent="#${command.id}">
+                                      <div class="accordion-body">
+                                          <span>Usage Examples:</span> <br />
+                                          <span class="examples">${command.example}<br></span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      `;
+                      generalcommandsSection.innerHTML += accordion;
+                  });
+              </script>
+      
+          
+        <div class="commands-section" id="Category1"></div>
+
+        <script>
+            const mediacommands = [
+                { id: 'media-setup', command: '$media setup', description: '- Set up media channels and roles' },
+                { id: 'media-reset', command: '$media reset', description: '- Reset media settings to default' },
+                { id: 'media-config', command: '$media config', description: '- Configure advanced media settings' }
+            ];
+        
+            const mediacommandsSection = document.getElementById('Category1');
+        
+            mediacommands.forEach(command => {
+                const accordion = `
+                    <div class="accordion accordion-flush mt-2" id="${command.id}">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f${command.id}">
+                                    ${command.command}&nbsp; <span class="command-descreption">${command.description}</span>
+                                </button>
+                            </h2>
+                            <div id="f${command.id}" class="accordion-collapse collapse" data-bs-parent="#${command.id}">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">${command.command}<br></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                mediacommandsSection.innerHTML += accordion;
+            });
+        </script>
+        
+
+      
+          
+    <div class="commands-section" id="Category2"></div>
+
+    <script>
+        const moderationcommands = [
+            { id: 'menable', command: '$menable', description: '- Enable moderation' },
+            { id: 'mdisable', command: '$mdisable', description: '- Disable moderation' },
+            { id: 'softban', command: '$softban', description: '- Ban and unban instantly to clear all messages (fun command)' },
+            { id: 'purge', command: '$purge', description: '- Remove messages' },
+            { id: 'purge contains', command: '$purge contains', description: '- Remove messages containing specific words' },
+            { id: 'purge-startswith', command: '$purge startswith', description: '- Remove messages starting with specific text' },
+            { id: 'purge invites', command: '$purge invites', description: '- Remove invite links' },
+            { id: 'purge user', command: '$purge user', description: '- Remove messages from a specific user' },
+            { id: 'mute', command: '$mute', description: '- Mute a member' },
+            { id: 'unmute', command: '$unmute', description: '- Unmute a member' },
+            { id: 'kick', command: '$kick', description: '- Kick a member' },
+            { id: 'roleallhumans', command: '$roleallhumans', description: '- Assign a role to all human members' },
+            { id: 'roleallbots', command: '$roleallbots', description: '- Assign a role to all bots' },
+            { id: 'removeallhumans', command: '$removeallhumans', description: '- Remove all human members' },
+            { id: 'removeallbots', command: '$removeallbots', description: '- Remove all bots' },
+            { id: 'warn', command: '$warn', description: '- Warn a member' },
+            { id: 'ban', command: '$ban', description: '- Ban a member' },
+            { id: 'unban', command: '$unban', description: '- Unban a member' },
+            { id: 'clone', command: '$clone', description: '- Clone a channel' },
+            { id: 'nick', command: '$nick', description: '- Change a member\'s nickname' },
+            { id: 'slowmode', command: '$slowmode', description: '- Enable slowmode in a channel' },
+            { id: 'unslowmode', command: '$unslowmode', description: '- Disable slowmode in a channel' },
+            { id: 'clear', command: '$clear', description: '- Clear messages' },
+            { id: 'clear all', command: '$clear all', description: '- Clear all messages' },
+            { id: 'clear bots', command: '$clear bots', description: '- Clear messages from bots' },
+            { id: 'clear embeds', command: '$clear embeds', description: '- Clear embedded messages' },
+            { id: 'clear files', command: '$clear files', description: '- Clear file attachments' },
+            { id: 'clear mentions', command: '$clear mentions', description: '- Clear messages with mentions' },
+            { id: 'clear images', command: '$clear images', description: '- Clear image attachments' },
+            { id: 'clear contains', command: '$clear contains', description: '- Clear messages containing specific words' },
+            { id: 'clear reactions', command: '$clear reactions', description: '- Clear message reactions' },
+            { id: 'nuke', command: '$nuke', description: '- Delete all messages in a channel' },
+            { id: 'lock', command: '$lock', description: '- Lock a channel' },
+            { id: 'unlock', command: '$unlock', description: '- Unlock a channel' },
+            { id: 'hide', command: '$hide', description: '- Hide a channel' },
+            { id: 'unhide', command: '$unhide', description: '- Unhide a channel' },
+            { id: 'lockall', command: '$lockall', description: '- Lock all channels' },
+            { id: 'unlockall', command: '$unlockall', description: '- Unlock all channels' },
+            { id: 'hideall', command: '$hideall', description: '- Hide all channels' },
+            { id: 'unhideall', command: '$unhideall', description: '- Unhide all channels' }
+        ];
+
+        const moderationcommandsSections = document.getElementById('Category2');
+
+        moderationcommands.forEach(command => {
+            const accordion = `
+                <div class="accordion accordion-flush mt-2" id="${command.id}">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f${command.id}">
+                                ${command.command}&nbsp; <span class="command-descreption">${command.description}</span>
+                            </button>
+                        </h2>
+                        <div id="f${command.id}" class="accordion-collapse collapse" data-bs-parent="#${command.id}">
+                            <div class="accordion-body">
+                                <span>Usage Examples:</span> <br />
+                                <span class="examples">${command.command}<br></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            moderationcommandsSections.innerHTML += accordion;
+        });
+    </script>
+
+      
+          
+<div class="commands-section" id="Category3"></div>
+
+<script>
+    const starboardCommands = [
+        { id: 'starboard-channel', command: '$starboard-channel', description: '- Set the starboard channel', example: '$starboard-channel [channel]' },
+        { id: 'starboard-starlimit', command: '$starboard-starlimit', description: '- Set the star limit for the starboard', example: '$starboard-starlimit [number]' },
+        { id: 'starboard-remove', command: '$starboard-remove', description: '- Remove a starboard entry', example: '$starboard-remove [entry]' }
+    ];
+
+    const Category3Section = document.getElementById('Category3');
+
+    starboardCommands.forEach(command => {
+        const accordion = `
+            <div class="accordion accordion-flush mt-2" id="${command.id}">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading${command.id.charAt(0).toUpperCase() + command.id.slice(1).replace(/-/g, '')}">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f${command.id}">
+                            ${command.command}&nbsp; <span class="command-descreption">${command.description}</span>
+                        </button>
+                    </h2>
+                    <div id="f${command.id}" class="accordion-collapse collapse" data-bs-parent="#${command.id}">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">${command.example}<br></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        Category3Section.innerHTML += accordion;
+    });
+</script>
+      
+<div class="commands-section" id="Category4"></div>
+
+<script>
+    const vanityCommands = [
+        { id: 'vrsetup', command: '$vrsetup', description: '- Set up a vanity URL', example: '$vrsetup [url]' },
+        { id: 'vrshow', command: '$vrshow', description: '- Show current vanity URL', example: '$vrshow' },
+        { id: 'vrremove', command: '$vrremove', description: '- Remove the vanity URL', example: '$vrremove' }
+    ];
+
+    const Category4Section = document.getElementById('Category4');
+
+    vanityCommands.forEach(command => {
+        const accordion = `
+            <div class="accordion accordion-flush mt-2" id="${command.id}">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading${command.id.charAt(0).toUpperCase() + command.id.slice(1)}">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f${command.id}">
+                            ${command.command}&nbsp; <span class="command-descreption">${command.description}</span>
+                        </button>
+                    </h2>
+                    <div id="f${command.id}" class="accordion-collapse collapse" data-bs-parent="#${command.id}">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">${command.example}<br></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        Category4Section.innerHTML += accordion;
+    });
+</script>
+
+
+<div class="commands-section" id="Category5"></div>
+
+<script>
+    const antiNukeCommands = [
+        { id: 'antinuke', command: '$antinuke', description: '- Main anti-nuke command', example: '$antinuke' },
+        { id: 'antinuke-enable', command: '$antinuke enable', description: '- Enable anti-nuke protection', example: '$antinuke enable' },
+        { id: 'antinuke-disable', command: '$antinuke disable', description: '- Disable anti-nuke protection', example: '$antinuke disable' },
+        { id: 'antinuke-show', command: '$antinuke show', description: '- Show current anti-nuke settings', example: '$antinuke show' },
+        { id: 'antinuke-punishment-set', command: '$antinuke punishment set', description: '- Set punishment for anti-nuke', example: '$antinuke punishment set [punishment]' },
+        { id: 'antinuke-whitelist-add', command: '$antinuke whitelist add', description: '- Add a user to the anti-nuke whitelist', example: '$antinuke whitelist add @user' },
+        { id: 'antinuke-whitelist-remove', command: '$antinuke whitelist remove', description: '- Remove a user from the anti-nuke whitelist', example: '$antinuke whitelist remove @user' },
+        { id: 'antinuke-whitelist-show', command: '$antinuke whitelist show', description: '- Show current anti-nuke whitelist', example: '$antinuke whitelist show' },
+        { id: 'antinuke-whitelist-reset', command: '$antinuke whitelist reset', description: '- Reset the anti-nuke whitelist', example: '$antinuke whitelist reset' },
+        { id: 'antinuke-channelclean', command: '$antinuke channelclean', description: '- Clean channels as part of anti-nuke', example: '$antinuke channelclean' },
+        { id: 'antinuke-roleclean', command: '$antinuke roleclean', description: '- Clean roles as part of anti-nuke', example: '$antinuke roleclean' },
+        { id: 'antinuke-setvanity', command: '$antinuke setvanity', description: '- Set vanity URL as part of anti-nuke', example: '$antinuke setvanity [url]' }
+    ];
+
+    const Category5Section = document.getElementById('Category5');
+
+    antiNukeCommands.forEach(command => {
+        const accordion = `
+            <div class="accordion accordion-flush mt-2" id="${command.id}">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading${command.id.charAt(0).toUpperCase() + command.id.slice(1).replace(/-/g, '')}">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f${command.id}">
+                            ${command.command}&nbsp; <span class="command-descreption">${command.description}</span>
+                        </button>
+                    </h2>
+                    <div id="f${command.id}" class="accordion-collapse collapse" data-bs-parent="#${command.id}">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">${command.example}<br></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        Category5Section.innerHTML += accordion;
+    });
+</script>
+
+
+<div class="commands-section" id="Category6"></div>
+
+<script>
+    const vcRoleCommands = [
+        { id: 'vcrole-bots-add', command: '$vcrole bots add', description: '- Add a role for bots in voice channels', example: '$vcrole bots add @role' },
+        { id: 'vcrole-bots-remove', command: '$vcrole bots remove', description: '- Remove a role for bots in voice channels', example: '$vcrole bots remove @role' },
+        { id: 'vcrole-bots', command: '$vcrole bots', description: '- Show the current role for bots in voice channels', example: '$vcrole bots' },
+        { id: 'vcrole-humans-add', command: '$vcrole humans add', description: '- Add a role for humans in voice channels', example: '$vcrole humans add @role' },
+        { id: 'vcrole-humans-remove', command: '$vcrole humans remove', description: '- Remove a role for humans in voice channels', example: '$vcrole humans remove @role' },
+        { id: 'vcrole-humans', command: '$vcrole humans', description: '- Show the current role for humans in voice channels', example: '$vcrole humans' },
+        { id: 'vcrole-reset', command: '$vcrole reset', description: '- Reset all voice channel roles', example: '$vcrole reset' },
+        { id: 'vcrole-config', command: '$vcrole config', description: '- Configure voice channel roles', example: '$vcrole config [option]' },
+        { id: 'vcrole', command: '$vcrole', description: '- Main vcrole command', example: '$vcrole' }
+    ];
+
+    const Category6Section = document.getElementById('Category6');
+
+    vcRoleCommands.forEach(command => {
+        const accordion = `
+            <div class="accordion accordion-flush mt-2" id="${command.id}">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading${command.id.charAt(0).toUpperCase() + command.id.slice(1).replace(/-/g, '')}">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f${command.id}">
+                            ${command.command}&nbsp; <span class="command-descreption">${command.description}</span>
+                        </button>
+                    </h2>
+                    <div id="f${command.id}" class="accordion-collapse collapse" data-bs-parent="#${command.id}">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">${command.example}<br></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        Category6Section.innerHTML += accordion;
+    });
+</script>
+
+
+<div class="commands-section" id="Category7"></div>
+
+<script>
+    const raidModeCommands = [
+        { id: 'raidmode-automod', command: '$raidmode automod', description: '- Enable or configure automod for raid mode', example: '$raidmode automod [settings]' },
+        { id: 'raidmode-antispam', command: '$raidmode antispam', description: '- Enable or configure antispam for raid mode', example: '$raidmode antispam [settings]' },
+        { id: 'raidmode-antilink', command: '$raidmode antilink', description: '- Enable or configure antilink for raid mode', example: '$raidmode antilink [settings]' }
+    ];
+
+    const Category7Section = document.getElementById('Category7');
+
+    raidModeCommands.forEach(command => {
+        const accordion = `
+            <div class="accordion accordion-flush mt-2" id="${command.id}">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading${command.id.charAt(0).toUpperCase() + command.id.slice(1).replace(/-/g, '')}">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f${command.id}">
+                            ${command.command}&nbsp; <span class="command-descreption">${command.description}</span>
+                        </button>
+                    </h2>
+                    <div id="f${command.id}" class="accordion-collapse collapse" data-bs-parent="#${command.id}">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">${command.example}<br></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        Category7Section.innerHTML += accordion;
+    });
+</script>
+
+
+<div class="commands-section" id="Category8"></div>
+
+<script>
+    const textToEmojiCommand = [
+        { id: 'texttoemoji', command: '$texttoemoji', description: '- Convert text to emoji representation', example: '$texttoemoji [text]' }
+    ];
+
+    const Category8Section = document.getElementById('Category8');
+
+    textToEmojiCommand.forEach(command => {
+        const accordion = `
+            <div class="accordion accordion-flush mt-2" id="${command.id}">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading${command.id.charAt(0).toUpperCase() + command.id.slice(1).replace(/-/g, '')}">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f${command.id}">
+                            ${command.command}&nbsp; <span class="command-descreption">${command.description}</span>
+                        </button>
+                    </h2>
+                    <div id="f${command.id}" class="accordion-collapse collapse" data-bs-parent="#${command.id}">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">${command.example}<br></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        Category8Section.innerHTML += accordion;
+    });
+</script>
+
+
+<div class="commands-section" id="Category9"></div>
+
+<script>
+    const loggingCommands = [
+        { id: 'logging', command: '$logging', description: '- Set up logging', example: '$logging [settings]' },
+        { id: 'logging-channel', command: '$logging-channel', description: '- Set the logging channel', example: '$logging-channel [channel]' },
+        { id: 'logging-config', command: '$logging-config', description: '- Configure logging settings', example: '$logging-config [config]' },
+        { id: 'logging-delete', command: '$logging-delete', description: '- Delete a logging entry', example: '$logging-delete [entry]' }
+    ];
+
+    const Category9Section = document.getElementById('Category9');
+
+    loggingCommands.forEach(command => {
+        const accordion = `
+            <div class="accordion accordion-flush mt-2" id="${command.id}">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading${command.id.charAt(0).toUpperCase() + command.id.slice(1).replace(/-/g, '')}">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f${command.id}">
+                            ${command.command}&nbsp; <span class="command-descreption">${command.description}</span>
+                        </button>
+                    </h2>
+                    <div id="f${command.id}" class="accordion-collapse collapse" data-bs-parent="#${command.id}">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">${command.example}<br></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        Category9Section.innerHTML += accordion;
+    });
+</script>
+
+
+<div class="commands-section" id="Category10"></div>
+
+<script>
+    const category10Commands = [
+        { id: 'sendpanel', command: '$sendpanel', description: '- Send a panel', example: '$sendpanel [panel]' },
+        { id: 'adduser', command: '$adduser', description: '- Add a user', example: '$adduser [user]' }
+    ];
+
+    const Category10Section = document.getElementById('Category10');
+
+    category10Commands.forEach(command => {
+        const accordion = `
+            <div class="accordion accordion-flush mt-2" id="${command.id}">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading${command.id.charAt(0).toUpperCase() + command.id.slice(1)}">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f${command.id}">
+                            ${command.command}&nbsp; <span class="command-descreption">${command.description}</span>
+                        </button>
+                    </h2>
+                    <div id="f${command.id}" class="accordion-collapse collapse" data-bs-parent="#${command.id}">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">${command.example}<br></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        Category10Section.innerHTML += accordion;
+    });
+</script>
+
+
+<div class="commands-section" id="Category11"></div>
+
+<script>
+    const category11Commands = [
+        { id: 'welcome', command: '$welcome', description: '- Set up a welcome message', example: '$welcome' },
+        { id: 'welcome-enable', command: '$welcome-enable', description: '- Enable welcome messages', example: '$welcome-enable' },
+        { id: 'welcome-disable', command: '$welcome-disable', description: '- Disable welcome messages', example: '$welcome-disable' },
+        { id: 'welcome-message', command: '$welcome-message', description: '- Set the welcome message', example: '$welcome-message [message]' },
+        { id: 'welcome-emessage', command: '$welcome-emessage', description: '- Set the embed welcome message', example: '$welcome-emessage [message]' },
+        { id: 'welcome-channel', command: '$welcome-channel', description: '- Set the welcome channel', example: '$welcome-channel [channel]' },
+        { id: 'welcome-test', command: '$welcome-test', description: '- Test the welcome message', example: '$welcome-test' }
+    ];
+
+    const Category11Section = document.getElementById('Category11');
+
+    category11Commands.forEach(command => {
+        const accordion = `
+            <div class="accordion accordion-flush mt-2" id="${command.id}">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading${command.id.charAt(0).toUpperCase() + command.id.slice(1).replace(/-/g, '')}">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f${command.id}">
+                            ${command.command}&nbsp; <span class="command-descreption">${command.description}</span>
+                        </button>
+                    </h2>
+                    <div id="f${command.id}" class="accordion-collapse collapse" data-bs-parent="#${command.id}">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">${command.example}<br></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        Category11Section.innerHTML += accordion;
+    });
+</script>
+
+
+<div class="commands-section" id="Category12"></div>
+
+<script>
+    const category12Commands = [
+        { id: 'gstart', command: '$gstart', description: '- Start a giveaway', example: '$gstart [duration] [prize]' },
+        { id: 'greroll', command: '$greroll', description: '- Reroll a giveaway', example: '$greroll <msgid>' },
+        { id: 'gend', command: '$gend', description: '- End a giveaway', example: '$gend <msgid>' }
+    ];
+
+    const Category12Section = document.getElementById('Category12');
+
+    category12Commands.forEach(command => {
+        const accordion = `
+            <div class="accordion accordion-flush mt-2" id="${command.id}">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading${command.id.charAt(0).toUpperCase() + command.id.slice(1).replace(/-/g, '')}">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f${command.id}">
+                            ${command.command}&nbsp; <span class="command-descreption">${command.description}</span>
+                        </button>
+                    </h2>
+                    <div id="f${command.id}" class="accordion-collapse collapse" data-bs-parent="#${command.id}">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">${command.example}<br></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        Category12Section.innerHTML += accordion;
+    });
+</script>
+
+
+<div class="commands-section" id="Category13"></div>
+
+<script>
+    const category13Commands = [
+        { id: 'tickle', command: '$tickle', description: '- Tickle a user', example: '$tickle @user' },
+        { id: 'kiss', command: '$kiss', description: '- Kiss a user', example: '$kiss @user' },
+        { id: 'hug', command: '$hug', description: '- Hug a user', example: '$hug @user' },
+        { id: 'slap', command: '$slap', description: '- Slap a user', example: '$slap @user' },
+        { id: 'pat', command: '$pat', description: '- Pat a user', example: '$pat @user' },
+        { id: 'feed', command: '$feed', description: '- Feed a user', example: '$feed @user' },
+        { id: 'pet', command: '$pet', description: '- Pet a user', example: '$pet @user' },
+        { id: 'howgay', command: '$howgay', description: '- Check how gay someone is', example: '$howgay @user' },
+        { id: 'slots', command: '$slots', description: '- Play a slot game', example: '$slots' },
+        { id: 'pp', command: '$pp', description: '- Show someone’s pp size', example: '$pp @user' },
+        { id: 'meme', command: '$meme', description: '- Get a random meme', example: '$meme' },
+        { id: 'cat', command: '$cat', description: '- Get a random cat picture', example: '$cat' },
+        { id: 'iplookup', command: '$iplookup', description: '- Lookup an IP address', example: '$iplookup [ip]' },
+        { id: 'ship', command: '$ship', description: '- Check compatibility between two users', example: '$ship @user1 @user2' },
+        { id: 'roast', command: '$roast', description: '- Roast a user', example: '$roast @user' }
+    ];
+
+    const Category13Section = document.getElementById('Category13');
+
+    category13Commands.forEach(command => {
+        const accordion = `
+            <div class="accordion accordion-flush mt-2" id="${command.id}">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading${command.id.charAt(0).toUpperCase() + command.id.slice(1).replace(/-/g, '')}">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f${command.id}">
+                            ${command.command}&nbsp; <span class="command-descreption">${command.description}</span>
+                        </button>
+                    </h2>
+                    <div id="f${command.id}" class="accordion-collapse collapse" data-bs-parent="#${command.id}">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">${command.example}<br></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        Category13Section.innerHTML += accordion;
+    });
+</script>
+
+
+<div class="commands-section" id="Category14"></div>
+
+<script>
+    const category14Commands = [
+        { id: 'choose-role', command: '$choose', description: '- Choose a role for a user', example: '$choose role_name role_mention' },
+        { id: 'rr-role', command: '$rr', description: '- Remove a role from a user', example: '$rr role_name' },
+        { id: 'remove-role-member', command: 'remove role_name', description: '- Remove a role from a member', example: 'remove role_name member' }
+    ];
+
+    const Category14Section = document.getElementById('Category14');
+
+    category14Commands.forEach(command => {
+        const accordion = `
+            <div class="accordion accordion-flush mt-2" id="${command.id}">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading${command.id.charAt(0).toUpperCase() + command.id.slice(1).replace(/-/g, '')}">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f${command.id}">
+                            ${command.command}&nbsp; <span class="command-descreption">${command.description}</span>
+                        </button>
+                    </h2>
+                    <div id="f${command.id}" class="accordion-collapse collapse" data-bs-parent="#${command.id}">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">${command.example}<br></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        Category14Section.innerHTML += accordion;
+    });
+</script>
+
+
+<div class="commands-section" id="Category15"></div>
+
+<script>
+    const category15Commands = [
+        { id: 'sayhello', command: '$sayhello', description: '- Greet the user', example: '$sayhello' },
+        { id: 'roll', command: '$roll', description: '- Roll a die', example: '$roll' },
+        { id: 'chooseit', command: '$chooseit', description: '- Choose between options', example: '$chooseit <text>' },
+        { id: 'flipcoin', command: '$flipcoin', description: '- Flip a coin', example: '$flipcoin' },
+        { id: 'compliment', command: '$compliment', description: '- Send a compliment', example: '$compliment' },
+        { id: 'vhug', command: '$vhug', description: '- Virtual hug', example: '$vhug' },
+        { id: 'truth', command: '$truth', description: '- Ask a truth question', example: '$truth' },
+        { id: 'dare', command: '$dare', description: '- Ask a dare question', example: '$dare' },
+        { id: 'genai', command: '$genai', description: '- Generate AI content', example: '$genai' }
+    ];
+
+    const Category15Section = document.getElementById('Category15');
+
+    category15Commands.forEach(command => {
+        const accordion = `
+            <div class="accordion accordion-flush mt-2" id="${command.id}">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading${command.id.charAt(0).toUpperCase() + command.id.slice(1).replace(/-/g, '')}">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f${command.id}">
+                            ${command.command}&nbsp; <span class="command-descreption">${command.description}</span>
+                        </button>
+                    </h2>
+                    <div id="f${command.id}" class="accordion-collapse collapse" data-bs-parent="#${command.id}">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">${command.example}<br></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        Category15Section.innerHTML += accordion;
+    });
+</script>
+
+
+<div class="commands-section" id="Category16"></div>
+
+<script>
+    const category16Commands = [
+        { id: 'b virus', command: '$b virus', description: '- Play virus sound', example: '$b virus' },
+        { id: 'b cutekimochi', command: '$b cutekimochi', description: '- Play cutekimochi sound', example: '$b cutekimochi' },
+        { id: 'b kimochi', command: '$b kimochi', description: '- Play kimochi sound', example: '$b kimochi' },
+        { id: 'b gigachad', command: '$b gigachad', description: '- Play gigachad sound', example: '$b gigachad' },
+        { id: 'b sigma', command: '$b sigma', description: '- Play sigma sound', example: '$b sigma' },
+        { id: 'b bosrike', command: '$b bosrike', description: '- Play bosrike sound', example: '$b bosrike' },
+        { id: 'b hmoan', command: '$b hmoan', description: '- Play hmoan sound', example: '$b hmoan' },
+        { id: 'b uaregey', command: '$b uaregey', description: '- Play uaregey sound', example: '$b uaregey' },
+        { id: 'b whyugey', command: '$b whyugey', description: '- Play whyugey sound', example: '$b whyugey' },
+        { id: 'b stepbro', command: '$b stepbro', description: '- Play stepbro sound', example: '$b stepbro' },
+        { id: 'b pstepbro', command: '$b pstepbro', description: '- Play pstepbro sound', example: '$b pstepbro' },
+        { id: 'b omgunoob', command: '$b omgunoob', description: '- Play omgunoob sound', example: '$b omgunoob' },
+        { id: 'b modibkl', command: '$b modibkl', description: '- Play modibkl sound', example: '$b modibkl' },
+        { id: 'b biharkid', command: '$b biharkid', description: '- Play biharkid sound', example: '$b biharkid' },
+        { id: 'b haatomc', command: '$b haatomc', description: '- Play haatomc sound', example: '$b haatomc' },
+        { id: 'b ninjahatori', command: '$b ninjahatori', description: '- Play ninjahatori sound', example: '$b ninjahatori' },
+        { id: 'b bengali', command: '$b bengali', description: '- Play bengali sound', example: '$b bengali' },
+        { id: 'b marathi', command: '$b marathi', description: '- Play marathi sound', example: '$b marathi' },
+        { id: 'b narutosad', command: '$b narutosad', description: '- Play narutosad sound', example: '$b narutosad' },
+        { id: 'b abdi', command: '$b abdi', description: '- Play abdi sound', example: '$b abdi' },
+        { id: 'b ahshit', command: '$b ahshit', description: '- Play ahshit sound', example: '$b ahshit' },
+        { id: 'b airhorn', command: '$b airhorn', description: '- Play airhorn sound', example: '$b airhorn' },
+        { id: 'b araara', command: '$b araara', description: '- Play araara sound', example: '$b araara' },
+        { id: 'b bhau', command: '$b bhau', description: '- Play bhau sound', example: '$b bhau' },
+        { id: 'b bruh', command: '$b bruh', description: '- Play bruh sound', example: '$b bruh' },
+        { id: 'b cuteuwu', command: '$b cuteuwu', description: '- Play cuteuwu sound', example: '$b cuteuwu' },
+        { id: 'b disconnected', command: '$b disconnected', description: '- Play disconnected sound', example: '$b disconnected' },
+        { id: 'b game-over', command: '$b game-over', description: '- Play game-over sound', example: '$b game-over' },
+        { id: 'b giggle', command: '$b giggle', description: '- Play giggle sound', example: '$b giggle' },
+        { id: 'b ha-gay', command: '$b ha-gay', description: '- Play ha-gay sound', example: '$b ha-gay' },
+        { id: 'b hellomf', command: '$b hellomf', description: '- Play hellomf sound', example: '$b hellomf' },
+        { id: 'b honk', command: '$b honk', description: '- Play honk sound', example: '$b honk' },
+        { id: 'b illuminati', command: '$b illuminati', description: '- Play illuminati sound', example: '$b illuminati' },
+        { id: 'b john-cena', command: '$b john-cena', description: '- Play john-cena sound', example: '$b john-cena' },
+        { id: 'b laugh', command: '$b laugh', description: '- Play laugh sound', example: '$b laugh' },
+        { id: 'b magic', command: '$b magic', description: '- Play magic sound', example: '$b magic' },
+        { id: 'b margayamc', command: '$b margayamc', description: '- Play margayamc sound', example: '$b margayamc' },
+        { id: 'b moin-meister', command: '$b moin-meister', description: '- Play moin-meister sound', example: '$b moin-meister' },
+        { id: 'b nani', command: '$b nani', description: '- Play nani sound', example: '$b nani' },
+        { id: 'b oioi', command: '$b oioi', description: '- Play oioi sound', example: '$b oioi' },
+        { id: 'b oioioi', command: '$b oioioi', description: '- Play oioioi sound', example: '$b oioioi' },
+        { id: 'b onichan', command: '$b onichan', description: '- Play onichan sound', example: '$b onichan' },
+        { id: 'b pew-pew', command: '$b pew-pew', description: '- Play pew-pew sound', example: '$b pew-pew' },
+        { id: 'b ph-intro', command: '$b ph-intro', description: '- Play ph-intro sound', example: '$b ph-intro' },
+        { id: 'b quack-quack', command: '$b quack-quack', description: '- Play quack-quack sound', example: '$b quack-quack' },
+        { id: 'b rickroll', command: '$b rickroll', description: '- Play rickroll sound', example: '$b rickroll' },
+        { id: 'b samsung-notification', command: '$b samsung-notification', description: '- Play samsung-notification sound', example: '$b samsung-notification' },
+        { id: 'b sheesh', command: '$b sheesh', description: '- Play sheesh sound', example: '$b sheesh' },
+        { id: 'b sike', command: '$b sike', description: '- Play sike sound', example: '$b sike' },
+        { id: 'b skype', command: '$b skype', description: '- Play skype sound', example: '$b skype' },
+        { id: 'b siuuu', command: '$b siuuu', description: '- Play siuuu sound', example: '$b siuuu' },
+        { id: 'b superidol', command: '$b superidol', description: '- Play superidol sound', example: '$b superidol' },
+        { id: 'b surprisemf', command: '$b surprisemf', description: '- Play surprisemf sound', example: '$b surprisemf' },
+        { id: 'b sus', command: '$b sus', description: '- Play sus sound', example: '$b sus' },
+        { id: 'b uwu', command: '$b uwu', description: '- Play uwu sound', example: '$b uwu' },
+        { id: 'b verpissdich', command: '$b verpissdich', description: '- Play verpissdich sound', example: '$b verpissdich' },
+        { id: 'b wow', command: '$b wow', description: '- Play wow sound', example: '$b wow' },
+        { id: 'b iphone-notification', command: '$b iphone-notification', description: '- Play iphone-notification sound', example: '$b iphone-notification' },
+        { id: 'b gimme-ohyeah', command: '$b gimme-ohyeah', description: '- Play gimme-ohyeah sound', example: '$b gimme-ohyeah' },
+        { id: 'b amogus', command: '$b amogus', description: '- Play amogus sound', example: '$b amogus' },
+        { id: 'b nogodno', command: '$b nogodno', description: '- Play nogodno sound', example: '$b nogodno' },
+        { id: 'b dattebayo', command: '$b dattebayo', description: '- Play dattebayo sound', example: '$b dattebayo' },
+        { id: 'b afewmomentslater', command: '$b afewmomentslater', description: '- Play afewmomentslater sound', example: '$b afewmomentslater' },
+        { id: 'b ilikecutg', command: '$b ilikecutg', description: '- Play ilikecutg sound', example: '$b ilikecutg' },
+        { id: 'b oppai-dragon', command: '$b oppai-dragon', description: '- Play oppai-dragon sound', example: '$b oppai-dragon' }
+    ];
+
+    const Category16Section = document.getElementById('Category16');
+
+    category16Commands.forEach(command => {
+        const accordion = `
+            <div class="accordion accordion-flush mt-2" id="${command.id}">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading${command.id.charAt(0).toUpperCase() + command.id.slice(1).replace(/-/g, '')}">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f${command.id}">
+                            ${command.command}&nbsp; <span class="command-descreption">${command.description}</span>
+                        </button>
+                    </h2>
+                    <div id="f${command.id}" class="accordion-collapse collapse" data-bs-parent="#${command.id}">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">${command.example}<br></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        Category16Section.innerHTML += accordion;
+    });
+</script>
+
+
+<div class="commands-section" id="Category17"></div>
+
+<script>
+    const category17Commands = [
+        { id: 'stats', command: '$stats', description: '- Get server statistics', example: '$stats' },
+        { id: 'invite', command: '$invite', description: '- Get server invite link', example: '$invite' },
+        { id: 'serverinfo', command: '$serverinfo', description: '- Get server information', example: '$serverinfo' },
+        { id: 'userinfo', command: '$userinfo', description: '- Get user information', example: '$userinfo [user]' },
+        { id: 'roleinfo', command: '$roleinfo', description: '- Get role information', example: '$roleinfo [role]' },
+        { id: 'botinfo', command: '$botinfo', description: '- Get bot information', example: '$botinfo' },
+        { id: 'status', command: '$status', description: '- Get bot status', example: '$status' },
+        { id: 'emoji', command: '$emoji', description: '- Get emoji information', example: '$emoji [emoji]' },
+        { id: 'user', command: '$user', description: '- Get user details', example: '$user [user]' },
+        { id: 'role', command: '$role', description: '- Get role details', example: '$role [role]' },
+        { id: 'channel', command: '$channel', description: '- Get channel details', example: '$channel [channel]' },
+        { id: 'boosts', command: '$boosts', description: '- Get server boosts information', example: '$boosts' },
+        { id: 'removeemoji', command: '$removeemoji', description: '- Remove an emoji', example: '$removeemoji [emoji]' },
+        { id: 'unbanall', command: '$unbanall', description: '- Unban all banned users', example: '$unbanall' },
+        { id: 'joined-at', command: '$joined-at', description: '- Get join date of a user', example: '$joined-at [user]' },
+        { id: 'ping', command: '$ping', description: '- Get bot latency', example: '$ping' },
+        { id: 'github', command: '$github', description: '- Get bot GitHub repository link', example: '$github' },
+        { id: 'vcinfo', command: '$vcinfo', description: '- Get voice channel information', example: '$vcinfo [voice-channel]' },
+        { id: 'channelinfo', command: '$channelinfo', description: '- Get channel information', example: '$channelinfo [channel]' },
+        { id: 'note', command: '$note', description: '- Add a note', example: '$note [note]' },
+        { id: 'notes', command: '$notes', description: '- Get all notes', example: '$notes' },
+        { id: 'trashnotes', command: '$trashnotes', description: '- Delete all notes', example: '$trashnotes' },
+        { id: 'badges', command: '$badges', description: '- Get user badges', example: '$badges [user]' },
+        { id: 'list boosters', command: '$list-boosters', description: '- List all server boosters', example: '$list-boosters' }
+    ];
+
+    const Category17Section = document.getElementById('Category17');
+
+    category17Commands.forEach(command => {
+        const accordion = `
+            <div class="accordion accordion-flush mt-2" id="${command.id}">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading${command.id.charAt(0).toUpperCase() + command.id.slice(1).replace(/-/g, '')}">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f${command.id}">
+                            ${command.command}&nbsp; <span class="command-descreption">${command.description}</span>
+                        </button>
+                    </h2>
+                    <div id="f${command.id}" class="accordion-collapse collapse" data-bs-parent="#${command.id}">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">${command.example}<br></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        Category17Section.innerHTML += accordion;
+    });
+</script>
+
+
+<div class="commands-section" id="Category18"></div>
+
+<script>
+    const category18Commands = [
+        { id: 'autoresponder-create', command: '$autoresponder create', description: '- Create a new autoresponder', example: '$autoresponder create [trigger] [response]' },
+        { id: 'autoresponder-edit', command: '$autoresponder edit', description: '- Edit an existing autoresponder', example: '$autoresponder edit [id] [new-trigger] [new-response]' },
+        { id: 'autoresponder-config', command: '$autoresponder config', description: '- Configure autoresponder settings', example: '$autoresponder config [setting] [value]' },
+        { id: 'autoresponder-delete', command: '$autoresponder delete', description: '- Delete an autoresponder', example: '$autoresponder delete [id]' }
+    ];
+
+    const Category18Section = document.getElementById('Category18');
+
+    category18Commands.forEach(command => {
+        const accordion = `
+            <div class="accordion accordion-flush mt-2" id="${command.id}">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading${command.id.charAt(0).toUpperCase() + command.id.slice(1).replace(/-/g, '')}">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f${command.id}">
+                            ${command.command}&nbsp; <span class="command-descreption">${command.description}</span>
+                        </button>
+                    </h2>
+                    <div id="f${command.id}" class="accordion-collapse collapse" data-bs-parent="#${command.id}">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">${command.example}<br></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        Category18Section.innerHTML += accordion;
+    });
+</script>
+
+
+
+</div>
+  <center>
+    <hr size="5" noshade color="#ffffff">
+  </center>
+  <div class='centerlinetext'>
+    <center>
+      <p>A full list of every command the bot has.</p>
+    </center>
+  </div>
+  <center>
+    <a
+      href="https://discord.com/oauth2/authorize?client_id=1040194948496109569&permissions=8&integration_type=0&scope=bot">
+      <input type="button" class="addbutton" value="Add Luka Now" onclick="">
+    </a>
+    <br>
+    <br>
+    <center>
+      <hr size="5" noshade color="#ffffff">
+    </center>
+  </center>
+    <br>
+    <br>
+  </center>
+  <center>
+  </center>
+  <div class='centerlinetext'>
+    <center>
+      <p>LUKA | Made with 💖</p>
+      <a href="https://discord.gg/Qrf7GsQEgh" target="_blank">
+        <img src="images/LUKA.png" width="50" height="50" alt="LUKA Logo">
+      </a>
+    </center>
+  </div>
+  <br>
+  <input id="commands" value="[{&#34;title&#34;:&#34;&lt;i class=&#39;fas fa-gift ttt&#39;&gt;&lt;/i&gt;&amp;nbsp; Moderation Commands&#34;,&#34;commands&#34;:[&#34;ban&#34;,&#34;kick&#34;,&#34;mute&#34;]},{&#34;title&#34;:&#34;&lt;i class=&#39;fas fa-globe-europe ttt&#39;&gt;&lt;/i&gt;&amp;nbsp; General Commands&#34;,&#34;commands&#34;:[&#34;help&#34;,&#34;ping&#34;,&#34;invite&#34;]},{&#34;title&#34;:&#34;&lt;i class=&#39;fas fa-hammer-war ttt&#39;&gt;&lt;/i&gt;&amp;nbsp;&amp;nbsp; Leveling Commands&#34;,&#34;commands&#34;:[&#34;leaderboard&#34;]},{&#34;title&#34;:&#34;&lt;i class=&#39;fas fas fa-crown ttt&#39;&gt;&lt;/i&gt;&amp;nbsp; Premium Commands&#34;,&#34;commands&#34;:[&#34;reactionrole&#34;,&#34;slowmode&#34;]}]" hidden />
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="/fontawesome/all.min.js"></script>
+  <script src="/js/animation.js"></script>
+  <script>
+      function active(elm){
+          document.getElementById("CategoryBtnAll").classList.remove("active");
+          document.getElementById("CategoryBtn0").classList.remove("active");
+          document.getElementById("CategoryBtn1").classList.remove("active");
+          document.getElementById("CategoryBtn2").classList.remove("active");
+          document.getElementById("CategoryBtn3").classList.remove("active");
+          document.getElementById("CategoryBtn4").classList.remove("active");
+          document.getElementById("CategoryBtn5").classList.remove("active");
+          document.getElementById("CategoryBtn6").classList.remove("active");
+          document.getElementById("CategoryBtn7").classList.remove("active");
+          document.getElementById("CategoryBtn8").classList.remove("active");
+          document.getElementById("CategoryBtn9").classList.remove("active");
+          document.getElementById("CategoryBtn10").classList.remove("active");
+          document.getElementById("CategoryBtn11").classList.remove("active");
+          document.getElementById("CategoryBtn12").classList.remove("active");
+          document.getElementById("CategoryBtn13").classList.remove("active");
+          document.getElementById("CategoryBtn14").classList.remove("active");
+          document.getElementById("CategoryBtn15").classList.remove("active");
+          document.getElementById("CategoryBtn16").classList.remove("active");
+          document.getElementById("CategoryBtn17").classList.remove("active");
+          document.getElementById("CategoryBtn18").classList.remove("active");
+          
+          document.getElementById("Category0").setAttribute("hidden", "");
+          document.getElementById("Category1").setAttribute("hidden", "");
+          document.getElementById("Category2").setAttribute("hidden", "");
+          document.getElementById("Category3").setAttribute("hidden", "");
+          document.getElementById("Category4").setAttribute("hidden", "");
+          document.getElementById("Category5").setAttribute("hidden", "");
+          document.getElementById("Category6").setAttribute("hidden", "");
+          document.getElementById("Category7").setAttribute("hidden", "");
+          document.getElementById("Category8").setAttribute("hidden", "");
+          document.getElementById("Category9").setAttribute("hidden", "");
+          document.getElementById("Category10").setAttribute("hidden", "");
+          document.getElementById("Category11").setAttribute("hidden", "");
+          document.getElementById("Category12").setAttribute("hidden", "");
+          document.getElementById("Category13").setAttribute("hidden", "");
+          document.getElementById("Category14").setAttribute("hidden", "");
+          document.getElementById("Category15").setAttribute("hidden", "");
+          document.getElementById("Category16").setAttribute("hidden", "");
+          document.getElementById("Category17").setAttribute("hidden", "");
+          document.getElementById("Category18").setAttribute("hidden", "");
+          
+          elm.classList.add("active");
+          
+          if(elm.id.replace("CategoryBtn", "") == "All"){
+              document.getElementById("Category0").removeAttribute("hidden");
+              document.getElementById("Category1").removeAttribute("hidden");
+              document.getElementById("Category2").removeAttribute("hidden");
+              document.getElementById("Category3").removeAttribute("hidden");
+              document.getElementById("Category4").removeAttribute("hidden");
+              document.getElementById("Category5").removeAttribute("hidden");
+              document.getElementById("Category6").removeAttribute("hidden");
+              document.getElementById("Category7").removeAttribute("hidden");
+              document.getElementById("Category8").removeAttribute("hidden");
+              document.getElementById("Category9").removeAttribute("hidden");
+              document.getElementById("Category10").removeAttribute("hidden");
+              document.getElementById("Category11").removeAttribute("hidden");
+              document.getElementById("Category12").removeAttribute("hidden");
+              document.getElementById("Category13").removeAttribute("hidden");
+              document.getElementById("Category14").removeAttribute("hidden");
+              document.getElementById("Category15").removeAttribute("hidden");
+              document.getElementById("Category16").removeAttribute("hidden");
+              document.getElementById("Category17").removeAttribute("hidden");
+              document.getElementById("Category18").removeAttribute("hidden");
+          }else{
+              document.getElementById("Category" + elm.id.replace("CategoryBtn", "")).removeAttribute("hidden");
+          }
+      }
+      
+      document.getElementById("CategoryBtnAll").click();
+      
+      function search(arg){
+            let commands = JSON.parse(document.getElementById("commands").value);
+            let cmds = [];
+            commands.forEach(category => {
+                category.commands.forEach(command => {
+                    cmds.push(command);
+                })
+            })
+            let existedCmds = cmds.filter(obj => obj.includes(arg.toLowerCase()));
+            cmds.forEach(cmd => {
+                document.getElementById(cmd).setAttribute("hidden", "");
+            })
+            existedCmds.forEach(cmd => {
+                document.getElementById(cmd).removeAttribute("hidden");
+            })
+        }
+  </script>
+
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+</body>
+
+</html>
