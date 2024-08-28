@@ -123,10 +123,12 @@
               <button onclick="active(this)" id="CategoryBtn17" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-plus ttt'></i>&nbsp; Extra Commands</button>
               
               <button onclick="active(this)" id="CategoryBtn18" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-robot ttt'></i>&nbsp; Autoresponse Commands</button>
+              <button onclick="active(this)" id="CategoryBtn19" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-nintendo ttt'></i>&nbsp; Automessage Commands</button>
           </div>
       </div>
     <div class="col-md-8 my-2">
-      <input type="text" class="w-100 search-box" oninput="search(this.value)" placeholder="Search for commands" />
+        <input type="text" class="w-100 search-box" oninput="search(this.value)" placeholder="Search for commands" />
+
       
           
               <div class="mt-4"></div>
@@ -957,6 +959,39 @@
     });
 </script>
 
+<div class="commands-section" id="Category19"></div>
+
+<script>
+    const category19Commands = [
+        { id: 'am-add', command: '$automessage add', description: '- Create an auto message', example: '$am add [channel] [interval] [true/false] [message]' },
+        { id: 'am-remove', command: '$automessage remove', description: '- Remove an Auto Message', example: '$am remove [channel]' },
+        { id: 'am-view', command: '$automessage view', description: '- View Auto Message Configuration', example: '$am view [channel]' },
+        { id: 'am-list', command: '$automessage list', description: '- List All Auto Messages', example: '$am list' }
+    ];
+
+    const Category19Section = document.getElementById('Category19');
+
+    category19Commands.forEach(command => {
+        const accordion = `
+            <div class="accordion accordion-flush mt-2" id="${command.id}">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading${command.id.charAt(0).toUpperCase() + command.id.slice(1).replace(/-/g, '')}">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f${command.id}">
+                            ${command.command}&nbsp; <span class="command-descreption">${command.description}</span>
+                        </button>
+                    </h2>
+                    <div id="f${command.id}" class="accordion-collapse collapse" data-bs-parent="#${command.id}">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">${command.example}<br></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        Category19Section.innerHTML += accordion;
+    });
+</script>
 
 
 </div>
@@ -1019,6 +1054,7 @@
           document.getElementById("CategoryBtn16").classList.remove("active");
           document.getElementById("CategoryBtn17").classList.remove("active");
           document.getElementById("CategoryBtn18").classList.remove("active");
+          document.getElementById("CategoryBtn19").classList.remove("active");
           
           document.getElementById("Category0").setAttribute("hidden", "");
           document.getElementById("Category1").setAttribute("hidden", "");
@@ -1039,7 +1075,8 @@
           document.getElementById("Category16").setAttribute("hidden", "");
           document.getElementById("Category17").setAttribute("hidden", "");
           document.getElementById("Category18").setAttribute("hidden", "");
-          
+          document.getElementById("Category19").setAttribute("hidden", "");
+
           elm.classList.add("active");
           
           if(elm.id.replace("CategoryBtn", "") == "All"){
@@ -1062,6 +1099,7 @@
               document.getElementById("Category16").removeAttribute("hidden");
               document.getElementById("Category17").removeAttribute("hidden");
               document.getElementById("Category18").removeAttribute("hidden");
+              document.getElementById("Category19").removeAttribute("hidden");
           }else{
               document.getElementById("Category" + elm.id.replace("CategoryBtn", "")).removeAttribute("hidden");
           }
@@ -1069,22 +1107,33 @@
       
       document.getElementById("CategoryBtnAll").click();
       
-      function search(arg){
-            let commands = JSON.parse(document.getElementById("commands").value);
-            let cmds = [];
-            commands.forEach(category => {
-                category.commands.forEach(command => {
-                    cmds.push(command);
-                })
-            })
-            let existedCmds = cmds.filter(obj => obj.includes(arg.toLowerCase()));
-            cmds.forEach(cmd => {
-                document.getElementById(cmd).setAttribute("hidden", "");
-            })
-            existedCmds.forEach(cmd => {
-                document.getElementById(cmd).removeAttribute("hidden");
-            })
+      function search(arg) {
+    const searchTerm = arg.toLowerCase();
+
+    document.querySelectorAll('.commands-section').forEach(section => section.removeAttribute('hidden'));
+
+    document.querySelectorAll('.accordion-item').forEach(item => {
+        const commandText = item.innerText.toLowerCase();
+        
+        if (commandText.includes(searchTerm)) {
+            item.closest('.commands-section').removeAttribute('hidden');
+            item.removeAttribute('hidden');
+        } else {
+            item.setAttribute('hidden', '');
         }
+    });
+    
+    document.querySelectorAll('.commands-section').forEach(section => {
+        const hasVisibleCommands = Array.from(section.querySelectorAll('.accordion-item'))
+                                        .some(item => !item.hasAttribute('hidden'));
+        if (!hasVisibleCommands) {
+            section.setAttribute('hidden', '');
+        }
+    });
+}
+
+
+
   </script>
 
   <script src="js/bootstrap.bundle.min.js"></script>
