@@ -52,6 +52,15 @@ function toggleMenu() {
   }
 }
 
+function hidev300() {
+  var x = document.getElementById("V5.9.5");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
 function hidev200() {
   var x = document.getElementById("V5.9.0");
   if (x.style.display === "none") {
@@ -68,6 +77,10 @@ function hidev100() {
   } else {
     x.style.display = "none";
   }
+}
+
+function startuphide() {
+  document.getElementById("V5.9.5").style.display = "none";
 }
 
 function startuphide() {
